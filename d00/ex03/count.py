@@ -15,7 +15,7 @@ def text_analyzer(text={}):
     punc = 0
     space = 0
     for i in range(len(str)):
-        if str[i].isupper():
+        if str[i].isupper():clea
             upper += 1
         elif str[i].islower():
             lower += 1
