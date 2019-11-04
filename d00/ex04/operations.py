@@ -1,5 +1,7 @@
 import sys
 
+# WARNING STRING FORMAT '%' OBSOLETE
+
 if __name__ == '__main__':
     try:
         n1 = float(sys.argv[1])
