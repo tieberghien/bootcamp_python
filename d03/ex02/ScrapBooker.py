@@ -22,7 +22,7 @@ class ScraperBooker:
             return np.vstack([array]*n)
         elif axis == 1:
             return np.hstack([array]*n)
-        else
+        else:
             print("Only accepts 2d images")
             exit()
 
