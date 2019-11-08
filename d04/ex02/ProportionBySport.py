@@ -2,6 +2,7 @@ from FileLoader import FileLoader
 
 def proportionBySport(data, year, sport, gender):
     dict = {}
+    data = data.drop_duplicates('Name', keep='last')
     df = data.loc[:, ['Sex', 'Age', 'Year', 'Sport']]
     spec = data.loc[(df['Year'] == year) & (df['Sex'] == gender) & (df['Sport'] == sport)]
     total = data.loc[(df['Year'] == year) & (df['Sex'] == gender)]
