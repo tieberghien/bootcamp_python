@@ -7,9 +7,9 @@ def youngestFellah(data, year):
     female = data.loc[(df['Year'] == year) & (df['Sex'] == "F")]
     dict.update({'f': female['Age'].min()})
     dict.update({'m': male['Age'].min()})
-    print(dict)
+    return dict
 
 if __name__ == '__main__':
     loader = FileLoader()
     data = loader.load("../athlete_events.csv")
-    youngestFellah(data, 2004)
+    print(youngestFellah(data, 2004))

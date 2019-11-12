@@ -12,3 +12,5 @@ class Vector:
         except:
             print("{} type provided for attribute 'length' instead of 'int'".format(type(length)))
             exit()
+
+    def __add__()

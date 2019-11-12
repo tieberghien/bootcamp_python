@@ -3,6 +3,7 @@ from FileLoader import FileLoader
 def howManyMedals(data, name):
     dict = {}
     athlete = data.loc[(data['Name'] == name)]
+    print(athlete)
     for year in athlete['Year']:
         gold = 0
         silver = 0
@@ -16,9 +17,9 @@ def howManyMedals(data, name):
             elif medal == 'Bronze':
                 bronze += 1
         dict.update({year: {'G': gold, 'S': silver, 'B' : bronze}})
-    print(dict)
+    return dict
 
 if __name__ == '__main__':
     loader = FileLoader()
     data = loader.load("../athlete_events.csv")
-    howManyMedals(data, 'Kjetil Andr Aamodt')
+    print(howManyMedals(data, 'Kjetil Andr Aamodt'))
